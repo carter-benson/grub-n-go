@@ -1,3 +1,4 @@
+/*
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -32,4 +33,19 @@ function App() {
   )
 }
 
-export default App
+export default App*/
+
+import React from 'react';
+import { Button } from '@mui/material';
+
+function App() {
+  return (
+    <div>
+      <Button variant="contained" color="primary">
+        Hello, MUI!
+      </Button>
+    </div>
+  );
+}
+
+export default App;
