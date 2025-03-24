@@ -37,7 +37,7 @@ export default App*/
 
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme';
+import theme from './theme/theme.jsx'
 import { Button } from '@mui/material';
 
 function App() {
