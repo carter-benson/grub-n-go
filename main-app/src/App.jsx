@@ -36,15 +36,19 @@ function App() {
 export default App*/
 
 import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
 import { Button } from '@mui/material';
 
 function App() {
   return (
-    <div>
-      <Button variant="contained" color="primary">
-        Hello, MUI!
-      </Button>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Button variant="contained" color="primary">
+          Welcome to Grub N Go, home of the Grub Burger.
+        </Button>
+      </div>
+    </ThemeProvider>
   );
 }
 
