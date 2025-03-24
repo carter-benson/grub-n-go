@@ -1,9 +1,9 @@
 # Node.js dependencies
-node_modules/
+node_modules
 
 # Build output
-dist/
-build/
+dist
+build
 
 # Logs
 *.log
@@ -31,3 +31,8 @@ yarn.lock
 # Temporary files from text editors or IDEs
 *.swp
 *.swo
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
