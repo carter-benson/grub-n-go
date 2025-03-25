@@ -37,13 +37,15 @@ export default App*/
 
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme/theme.jsx'
+import theme from './theme.js'
 import { Button } from '@mui/material';
+import ResponsiveAppBar from './components/ResponsiveAppBar.js';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div>
+        <ResponsiveAppBar />
         <Button variant="contained" color="primary">
           Welcome to Grub N Go, home of the Grub Burger.
         </Button>
