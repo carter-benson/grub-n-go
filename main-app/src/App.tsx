@@ -24,9 +24,10 @@ function App() {
             alignItems: 'center',
           }}
         >
+          <ResponsiveAppBar />
 
           <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-            Carter Benson
+            Grub N' Go
           </Typography>
 
           <Typography
@@ -36,10 +37,8 @@ function App() {
               width: { sm: '100%', md: '80%' },
             }}
           >
-            Currently studying computer science at Mercer University, located in Macon, Georgia.
+            Find your favorite foods.
           </Typography>
-
-          <ResponsiveAppBar />
 
           <div>
             <Button variant="contained" color="primary">
