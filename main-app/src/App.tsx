@@ -1,56 +1,48 @@
-/*
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App*/
-
-import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme.js'
-import { Button } from '@mui/material';
+import * as React from 'react';
+import Button from '@mui/material/Button';
 import ResponsiveAppBar from './components/ResponsiveAppBar.js';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <div>
+
+    <Container maxWidth="lg">
+      <Box
+        sx={{
+          mt: 0,
+          mb: 4,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+
+        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
+          Carter Benson
+        </Typography>
+
+        <Typography
+          sx={{
+            textAlign: 'center',
+            color: 'text.secondary',
+            width: { sm: '100%', md: '80%' },
+          }}
+        >
+          Currently studying computer science at Mercer University, located in Macon, Georgia.
+        </Typography>
+
         <ResponsiveAppBar />
-        <Button variant="contained" color="primary">
-          Welcome to Grub N Go, home of the Grub Burger.
-        </Button>
-      </div>
-    </ThemeProvider>
+
+        <div>
+          <Button variant="contained" color="primary">
+            Welcome to Grub N Go, home of the Grub Burger.
+          </Button>
+        </div>
+      </Box>
+    </Container>
   );
 }
 
