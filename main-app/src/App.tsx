@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import ResponsiveAppBar from './components/ResponsiveAppBar.js';
+import ResponsiveAppBar from './components/ResponsiveAppBar.tsx';
+import Card from './components/Card.tsx';
+import ComboBox from './components/ComboBox.tsx';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -29,6 +31,9 @@ function App() {
           <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
             Grub N' Go
           </Typography>
+
+          <ComboBox />
+          <Card />
 
           <Typography
             sx={{
