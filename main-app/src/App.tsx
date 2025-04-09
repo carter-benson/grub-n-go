@@ -12,7 +12,7 @@ import theme from './theme.js'
 import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
-  const [selectedFoodGroup, setSelectedFoodGroup] = React.useState<FoodGroupOption | null>(null);
+  const [selectedFoodGroup, setSelectedFoodGroup] = useState<FoodGroupOption | null>(null);
   const [restaurants, setRestaurants] = React.useState<any[]>([]);
 
   const handleFetchRestaurants = async () => {
@@ -21,13 +21,13 @@ function App() {
 
     // fetch restaurants from selected food group
     try {
-      const response = await fetch('https://https://9jyxoz760g.execute-api.us-east-2.amazonaws.com/prod/restaurants', {
-        method: 'POST',
+      const response = await fetch(`https://9jyxoz760g.execute-api.us-east-2.amazonaws.com/prod/restaurants?food_group=${encodeURIComponent(selectedFoodGroup.label)}`, {
+        method: 'GET',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ food_group: selectedFoodGroup.label })
       });
 
       const data = await response.json();
+      console.log(data);
       setRestaurants(data);
     } catch (error) {
       console.error('Failed to fetch restaurants:', error);
@@ -65,6 +65,19 @@ function App() {
           >
             Search for Restaurants
           </Button>
+
+          {restaurants.length > 0 && (
+            <Box sx={{ mt: 4, textAlign: 'center' }}>
+              <Typography variant='h6' sx={{ mb: 2 }}>
+                Restaurants:
+              </Typography>
+              {restaurants.map((restaurant, index) => (
+                <Typography key={index}>
+                  {restaurant.name}, Rating: {restaurant.rating}, Price: {restaurant.price_range}
+                </Typography>
+              ))}
+            </Box>
+          )}
 
           <Card />
 
