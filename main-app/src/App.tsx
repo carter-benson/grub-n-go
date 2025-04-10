@@ -51,8 +51,8 @@ function App() {
         >
           <ResponsiveAppBar />
 
-          <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-            Grub N' Go
+          <Typography variant="h4" color="text.secondary" component="h1" sx={{ mb: 2 }}>
+            Find your favorite foods.
           </Typography>
 
           <ComboBox value={selectedFoodGroup} onChange={setSelectedFoodGroup} />
@@ -85,22 +85,6 @@ function App() {
           )}
 
           <Card />
-
-          <Typography
-            sx={{
-              textAlign: 'center',
-              color: 'text.secondary',
-              width: { sm: '100%', md: '80%' },
-            }}
-          >
-            Find your favorite foods.
-          </Typography>
-
-          <div>
-            <Button variant="contained" color="primary">
-              Welcome to Grub N Go, home of the Grub Burger.
-            </Button>
-          </div>
         </Box>
       </Container>
     </ThemeProvider>
