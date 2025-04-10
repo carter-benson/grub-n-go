@@ -72,7 +72,12 @@ function App() {
                 Restaurants:
               </Typography>
               {restaurants.map((restaurant, index) => (
-                <Typography key={index}>
+                <Typography key={index}
+                  sx={{
+                    color: 'black'
+                  }}
+                  >
+                  
                   {restaurant.name}, Rating: {restaurant.rating}, Price: {restaurant.price_range}
                 </Typography>
               ))}
