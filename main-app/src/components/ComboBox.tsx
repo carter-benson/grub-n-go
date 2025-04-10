@@ -19,7 +19,9 @@ export default function ComboBox({ value, onChange}: Props) {
       options={foodGroups}
       value={value}
       onChange={(event, newValue) => onChange(newValue)}
-      sx={{ width: 300 }}
+      sx={{
+        text: 'black',
+        width: 300 }}
       renderInput={(params) => <TextField {...params} label="Food Group" />}
 
       slotProps={{
