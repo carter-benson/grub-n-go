@@ -4,13 +4,13 @@ import Button from '@mui/material/Button';
 import ResponsiveAppBar from './components/ResponsiveAppBar.tsx';
 import Card from './components/Card.tsx';
 import ComboBox, { FoodGroupOption } from './components/ComboBox.tsx';
+import TitleBanner from './components/TitleBanner.tsx';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme.js'
 import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
 
 function App() {
   const [selectedFoodGroup, setSelectedFoodGroup] = useState<FoodGroupOption | null>(null);
@@ -39,9 +39,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <Container maxWidth="lg">
+      
         <Box
           sx={{
+            width: "100%",
             mt: 0,
             mb: 4,
             display: 'flex',
@@ -51,6 +52,8 @@ function App() {
           }}
         >
           <ResponsiveAppBar />
+
+          <TitleBanner />
 
           <Typography variant="h4" color="text.secondary" component="h1" sx={{ mb: 2 }}>
             Find your favorite foods.
@@ -87,7 +90,7 @@ function App() {
             ))}
           </Box>
         </Box>
-      </Container>
+      
     </ThemeProvider>
   );
 }
