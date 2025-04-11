@@ -9,7 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = ['Home', 'Restaurants', 'About'];
 
@@ -28,8 +27,22 @@ function ResponsiveAppBar() {
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={"a"} alt="Logo" style={{ width: 32, height: 32, marginRight: 8 }} />
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'text.primary' }} />
+
+        <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: 32,
+              height: 32,
+              marginRight: 1,
+            }}
+          >
+            <img
+              src={"https://i.ibb.co/FkDhjWmq/Grub-NGo-Icon-White.png"}
+              style={{ width: '100%', height: '100%' }}
+            />
+          </Box>
 
           <Typography
             variant="h6"
@@ -82,8 +95,22 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, color: 'text.primary' }} />
+          
+          <Box
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: 32,
+              height: 32,
+              marginRight: 1,
+            }}
+          >
+            <img
+              src={"https://i.ibb.co/FkDhjWmq/Grub-NGo-Icon-White.png"}
+              style={{ width: '100%', height: '100%' }}
+            />
+          </Box>
 
           <Typography
             variant="h5"
