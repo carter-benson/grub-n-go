@@ -12,23 +12,41 @@ type Props = {
   onChange: (value: FoodGroupOption | null) => void;
 }
 
-export default function ComboBox({ value, onChange}: Props) {
+export default function ComboBox({ value, onChange }: Props) {
   return (
     <Autocomplete
       disablePortal
       options={foodGroups}
       value={value}
       onChange={(event, newValue) => onChange(newValue)}
+
       sx={{
-        text: 'black',
-        width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Food Group" />}
+        width: 300,
+        '& .MuiOutlinedInput-notchedOutline': {
+          borderWidth: '2px',
+        },
+        '& .MuiOutlinedInput-root': {
+          '&:hover .MuiOutlinedInput-notchedOutline': {
+            borderColor: 'primary.main',
+            borderWidth: '2px',
+          },
+        },
+      }}
+
+      renderInput={(params) => <TextField {...params} label="Enter a Food Group..." sx={{
+        input: { color: "text.secondary" },
+        label: { color: "text.secondary" },
+        '.MuiInputBase-root': { color: "text.secondary" },
+        '&:hover .MuiOutlinedInput-notchedOutline': {
+        borderColor: 'primary.main'}
+      }} />
+      }
 
       slotProps={{
         popper: {
           sx: {
             "& .MuiAutocomplete-option": {
-              color: "black",
+              color: "text.secondary",
             },
           },
         },

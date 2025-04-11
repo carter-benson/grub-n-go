@@ -28,6 +28,7 @@ function ResponsiveAppBar() {
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          <img src={"a"} alt="Logo" style={{ width: 32, height: 32, marginRight: 8 }} />
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'text.primary' }} />
 
           <Typography

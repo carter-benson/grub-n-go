@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme.js'
 import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
 
 function App() {
   const [selectedFoodGroup, setSelectedFoodGroup] = useState<FoodGroupOption | null>(null);
@@ -66,25 +67,25 @@ function App() {
             Search for Restaurants
           </Button>
 
-          {restaurants.length > 0 && (
-            <Box sx={{ mt: 4, textAlign: 'center' }}>
-              <Typography variant='h6' sx={{ mb: 2 }}>
-                Restaurants:
-              </Typography>
-              {restaurants.map((restaurant, index) => (
-                <Typography key={index}
-                  sx={{
-                    color: 'black'
-                  }}
-                  >
-                  
-                  {restaurant.name}, Rating: {restaurant.rating}, Price: {restaurant.price_range}
-                </Typography>
-              ))}
-            </Box>
-          )}
-
-          <Card />
+          <Box
+            sx={{
+              mt: 4,
+              display: 'flex',
+              justifyContent: 'center',
+              gap: 4,
+              flexWrap: 'wrap',
+            }}
+          >
+            {restaurants.slice(0, 2).map((restaurant, index) => (
+              <Box key={index} sx={{ width: 300 }}>
+                <Card
+                  name={restaurant.name}
+                  rating={restaurant.rating}
+                  priceRange={restaurant.price_range}
+                />
+              </Box>
+            ))}
+          </Box>
         </Box>
       </Container>
     </ThemeProvider>
