@@ -28,7 +28,7 @@ export default function TitleBanner() {
                     zIndex: 1,
                     fontWeight: 'bold',
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                    fontSize: { xs: '2rem', sm: '2.5rem', md: '4rem' }
+                    fontSize: { xs: '2rem', sm: '2rem', md: '4rem' }
                 }}
             >
                 Easy, Convenient, and Fast
