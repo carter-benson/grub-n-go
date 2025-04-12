@@ -27,11 +27,11 @@ export default function AudioPlayerComponent() {
     return (
         <div>
             <audio ref={audioRef} src="/grub_n_go_story.mp3" preload="auto" />
-            <Stack direction="row" spacing={2} mt={2}>
-                <Button variant="contained" startIcon={<PlayArrowIcon />} onClick={handlePlay} sx={{color:"#ffffff"}}>
+            <Stack direction="row" spacing={1} mt={1}>
+                <Button variant="contained" startIcon={<PlayArrowIcon />} onClick={handlePlay} sx={{ color:"#ffffff" }}>
                     Play
                 </Button>
-                <Button variant="contained" startIcon={<PauseIcon />} onClick={handlePause} sx={{color:"#ffffff"}}>
+                <Button variant="contained" startIcon={<PauseIcon />} onClick={handlePause} sx={{ color:"#ffffff" }}>
                     Pause
                 </Button>
                 <Button

@@ -38,6 +38,7 @@ export default function HomeComponent() {
                 variant="h5"
                 color="text.secondary"
                 sx={{
+                    width: "90%",
                     m: 0,
                     zIndex: 1,
                     fontWeight: '300',

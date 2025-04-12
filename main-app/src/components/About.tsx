@@ -16,7 +16,7 @@ export default function AboutComponent() {
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 alignItems: 'center',
-                px: 18,
+                px: { xs: 2, sm: 6, md: 18 },
                 py: 3,
                 gap: 2,
                 marginBottom: 5
@@ -40,6 +40,7 @@ export default function AboutComponent() {
                 variant="h5"
                 color="text.secondary"
                 sx={{
+                    width: "90%",
                     m: 0,
                     zIndex: 1,
                     fontWeight: '300',
@@ -55,7 +56,7 @@ export default function AboutComponent() {
             <Box
                 sx={{
                     border: '5px solid #ffa200',
-                    width: '430px',
+                    width: { md:'400px', sm: '360px' },
                     borderRadius: '8px',
                     position: 'relative',
                     backgroundSize: 'cover',
