@@ -90,7 +90,8 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography color="inherit" sx={{ textAlign: 'center', color:'text.secondary' }}>{page}</Typography>
+                  <Typography component="a"
+                href={`#${page.toLowerCase()}`} color="inherit" sx={{ textAlign: 'center', color:'text.secondary' }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -132,7 +133,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, color:'text.primary' }}>
             {pages.map((page) => (
               <Button
-              component="a"
+                component="a"
                 href={`#${page.toLowerCase()}`}
                 key={page}
                 onClick={handleCloseNavMenu}
