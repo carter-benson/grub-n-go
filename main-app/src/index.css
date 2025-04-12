@@ -35,6 +35,11 @@ body {
 }
 */
 
+html {
+  scroll-padding-top: 100px; /* or the height of your AppBar */
+  scroll-behavior: smooth;
+}
+
 body, #root {
   margin: 0;
   padding: 0;

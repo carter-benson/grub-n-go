@@ -39,27 +39,30 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Box
+        sx={{
+          width: "100%",
+          mt: 0,
+          mb: 4,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <ResponsiveAppBar />
 
-      
-        <Box
-          sx={{
-            width: "100%",
-            mt: 0,
-            mb: 4,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <ResponsiveAppBar />
+        <TitleBanner />
 
-          <TitleBanner />
-
+        <div id="home">
           <HomeComponent />
+        </div>
 
+        <div id="about">
           <AboutComponent />
+        </div>
 
+        <div id="restaurants">
           <Typography variant="h4" color="text.secondary" component="h1" sx={{ mb: 2 }}>
             Find your favorite foods.
           </Typography>
@@ -95,8 +98,9 @@ function App() {
               </Box>
             ))}
           </Box>
-        </Box>
-      
+        </div>
+      </Box>
+
     </ThemeProvider>
   );
 }

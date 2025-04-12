@@ -132,6 +132,8 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, color:'text.primary' }}>
             {pages.map((page) => (
               <Button
+              component="a"
+                href={`#${page.toLowerCase()}`}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'text.primary', display: 'block' }}
