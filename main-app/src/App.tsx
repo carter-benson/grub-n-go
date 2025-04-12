@@ -5,6 +5,7 @@ import ResponsiveAppBar from './components/ResponsiveAppBar.tsx';
 import Card from './components/Card.tsx';
 import ComboBox, { FoodGroupOption } from './components/ComboBox.tsx';
 import TitleBanner from './components/TitleBanner.tsx';
+import HomeComponent from './components/Home.tsx';
 import AboutComponent from './components/About.tsx';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -54,6 +55,8 @@ function App() {
           <ResponsiveAppBar />
 
           <TitleBanner />
+
+          <HomeComponent />
 
           <AboutComponent />
 

@@ -1,9 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import AudioPlayer from './AudioPlayer';
 
-export default function AboutComponent() {
+export default function HomeComponent() {
     return (
         <Box
             sx={{
@@ -17,7 +16,7 @@ export default function AboutComponent() {
                 justifyContent: 'flex-start',
                 alignItems: 'center',
                 px: 12,
-                py: 3,
+                py: 4,
                 gap: 2,
                 marginBottom: 5
             }}
@@ -33,7 +32,7 @@ export default function AboutComponent() {
                     fontSize: { xs: '2rem', sm: '3rem', md: '4rem' }
                 }}
             >
-                About Us
+                Home
             </Typography>
 
             <Typography
@@ -50,8 +49,6 @@ export default function AboutComponent() {
                 We are the Grub N Go team. Our mission is to help you find the foods you love. We've curated a list of restaurants
                 in the Macon area so that you can plan your next meal with ease.
             </Typography>
-
-            <AudioPlayer />
         </Box>
     );
 }

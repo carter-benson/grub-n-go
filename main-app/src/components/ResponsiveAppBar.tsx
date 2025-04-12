@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Home', 'Restaurants', 'About'];
+const pages = ['Home', 'About', 'Restaurants'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -45,7 +45,7 @@ function ResponsiveAppBar() {
           </Box>
 
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             sx={{
               mr: 2,
