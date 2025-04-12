@@ -21,14 +21,14 @@ export default function ComboBox({ value, onChange }: Props) {
       onChange={(event, newValue) => onChange(newValue)}
 
       sx={{
-        width: 300,
+        width: 200,
         '& .MuiOutlinedInput-notchedOutline': {
-          borderWidth: '2px',
+          borderWidth: '3px',
         },
         '& .MuiOutlinedInput-root': {
           '&:hover .MuiOutlinedInput-notchedOutline': {
             borderColor: 'primary.main',
-            borderWidth: '2px',
+            borderWidth: '3px',
           },
         },
       }}

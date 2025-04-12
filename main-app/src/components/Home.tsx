@@ -14,7 +14,7 @@ export default function HomeComponent() {
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 alignItems: 'center',
-                px: 12,
+                px: { xs: 2, sm: 6, md: 18 },
                 py: 4,
                 gap: 2,
                 marginBottom: 0
@@ -45,8 +45,7 @@ export default function HomeComponent() {
                     fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' }
                 }}
             >
-                We are the Grub N Go team. Our mission is to help you find the foods you love. We've curated a list of restaurants
-                in the Macon area so that you can plan your next meal with ease.
+                Welcome to Grub N' Go. Here, you can plan your next meal with just a button. Simply choose a food group from our curated list.
             </Typography>
         </Box>
     );

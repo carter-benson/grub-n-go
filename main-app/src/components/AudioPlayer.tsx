@@ -28,13 +28,22 @@ export default function AudioPlayerComponent() {
         <div>
             <audio ref={audioRef} src="/grub_n_go_story.mp3" preload="auto" />
             <Stack direction="row" spacing={2} mt={2}>
-                <Button variant="contained" startIcon={<PlayArrowIcon />} onClick={handlePlay}>
+                <Button variant="contained" startIcon={<PlayArrowIcon />} onClick={handlePlay} sx={{color:"#ffffff"}}>
                     Play
                 </Button>
-                <Button variant="contained" startIcon={<PauseIcon />} onClick={handlePause}>
+                <Button variant="contained" startIcon={<PauseIcon />} onClick={handlePause} sx={{color:"#ffffff"}}>
                     Pause
                 </Button>
-                <Button variant="outlined" startIcon={<RestartAltIcon />} onClick={handleRestart}>
+                <Button
+                    sx={{
+                        borderWidth: '3px',
+                        '&:hover': {
+                            borderColor: 'primary.main',
+                            backgroundColor: '#ffffff',
+                        }
+                    }}
+                    variant="outlined" startIcon={<RestartAltIcon />} onClick={handleRestart}
+                >
                     Restart
                 </Button>
             </Stack>

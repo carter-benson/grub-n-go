@@ -28,7 +28,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-        <Box
+          <Box
             sx={{
               display: { xs: 'none', md: 'flex' },
               justifyContent: 'center',
@@ -60,7 +60,7 @@ function ResponsiveAppBar() {
             GRUB N' GO
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color:'text.primary' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'text.primary' }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -90,13 +90,22 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography component="a"
-                href={`#${page.toLowerCase()}`} color="inherit" sx={{ textAlign: 'center', color:'text.secondary' }}>{page}</Typography>
+                  <Typography
+                    component="a"
+                    href={`#${page.toLowerCase()}`} color="inherit" sx={{
+                      textAlign: 'center',
+                      color: 'text.secondary',
+                      '&:hover': {
+                        color: 'primary.main',
+                      }
+                    }}
+                  >{page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          
+
           <Box
             sx={{
               display: { xs: 'flex', md: 'none' },
@@ -130,14 +139,21 @@ function ResponsiveAppBar() {
             GRUB N' GO
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, color:'text.primary' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'text.primary' }}>
             {pages.map((page) => (
               <Button
                 component="a"
                 href={`#${page.toLowerCase()}`}
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'text.primary', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: 'text.primary',
+                  display: 'block',
+                  '&:hover': {
+                    color: '#000000',
+                  }
+                }}
               >
                 {page}
               </Button>

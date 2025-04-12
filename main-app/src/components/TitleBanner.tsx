@@ -28,7 +28,7 @@ export default function TitleBanner() {
                     zIndex: 1,
                     fontWeight: 'bold',
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                    fontSize: { xs: '2rem', sm: '3rem', md: '4rem' }
+                    fontSize: { xs: '2rem', sm: '2.5rem', md: '4rem' }
                 }}
             >
                 Easy, Convenient, and Fast
@@ -43,7 +43,7 @@ export default function TitleBanner() {
                     zIndex: 1,
                     fontWeight: '300',
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-                    fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' }
+                    fontSize: { xs: '1rem', sm: '1rem', md: '1.5rem' }
                 }}
             >
                 Discover restaurants that match your tastes.

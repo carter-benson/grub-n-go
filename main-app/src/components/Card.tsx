@@ -6,15 +6,6 @@ import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import { SxProps } from '@mui/material/styles';
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
-
 type CardProps = {
   name: string;
   rating: number;
@@ -24,9 +15,9 @@ type CardProps = {
 
 export default function RestaurantCard({ name, rating, priceRange, sx}: CardProps) {
   return (
-    <Card sx={{ width: "100%", color:'text.secondary' }}>
+    <Card sx={{ borderTop: '15px solid #ffa200', borderBottom: '5px solid #ffa200', width: "100%", color:'text.secondary' }}>
       <CardContent>
-        <Typography variant="h5" component="div" color="text.secondary">
+        <Typography sx={{ marginBottom: 1, fontWeight: 'bold'}} variant="h5" component="div" color="text.secondary">
           {name}
         </Typography>
 
@@ -36,7 +27,7 @@ export default function RestaurantCard({ name, rating, priceRange, sx}: CardProp
 
         <Rating name="read-only" value={rating} readOnly />
 
-        <Typography variant="body2" sx={{ mt: 1, mb: 1.5 }} color="text.secondary">
+        <Typography variant="body2" sx={{ marginY: 0 }} color="text.secondary">
           Price Range: {"$".repeat(Number(priceRange))}
         </Typography>
       </CardContent>

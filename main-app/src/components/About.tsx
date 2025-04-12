@@ -16,7 +16,7 @@ export default function AboutComponent() {
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 alignItems: 'center',
-                px: 12,
+                px: 18,
                 py: 3,
                 gap: 2,
                 marginBottom: 5
@@ -44,14 +44,49 @@ export default function AboutComponent() {
                     zIndex: 1,
                     fontWeight: '300',
                     textAlign: 'center',
-                    fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' }
+                    fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+                    marginBottom: 3
                 }}
             >
-                We are the Grub N Go team. Our mission is to help you find the foods you love. We've curated a list of restaurants
+                We are the Grub N' Go team. Our mission is to help you find the foods you love. We've curated a list of restaurants
                 in the Macon area so that you can plan your next meal with ease.
             </Typography>
 
-            <AudioPlayer />
+            <Box
+                sx={{
+                    border: '5px solid #ffa200',
+                    width: '430px',
+                    borderRadius: '8px',
+                    position: 'relative',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    px: { xs: 2, sm: 6, md: 18 },
+                    py: 3,
+                    gap: 2,
+                    marginBottom: 5
+                }}
+            >
+                <Typography
+                    variant="h5"
+                    color="primary.main"
+                    sx={{
+                        width: "200%",
+                        m: 0,
+                        zIndex: 1,
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                        fontSize: { xs: '1rem', sm: '1.5rem', md: '1.5rem' }
+                    }}
+                >
+                    Listen to our story:
+                </Typography>
+
+                <AudioPlayer />
+            </Box>
         </Box>
     );
 }

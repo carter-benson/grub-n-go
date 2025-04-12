@@ -63,20 +63,30 @@ function App() {
         </div>
 
         <div id="restaurants">
-          <Typography variant="h4" color="text.secondary" component="h1" sx={{ mb: 2 }}>
-            Find your favorite foods.
-          </Typography>
-
-          <ComboBox value={selectedFoodGroup} onChange={setSelectedFoodGroup} />
-
-          <Button
-            onClick={handleFetchRestaurants}
-            variant="contained"
-            color="primary"
-            sx={{ mt: 2 }}
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              mt: 4,
+            }}
           >
-            Search for Restaurants
-          </Button>
+            <Typography variant="h4" color="text.secondary" component="h1" sx={{ mb: 2 }}>
+              Find your favorite foods.
+            </Typography>
+
+            <ComboBox value={selectedFoodGroup} onChange={setSelectedFoodGroup} />
+
+            <Button
+              onClick={handleFetchRestaurants}
+              variant="contained"
+              color="primary"
+              sx={{ mt: 2 }}
+            >
+              Search for Restaurants
+            </Button>
+          </Box>
 
           <Box
             sx={{
