@@ -48,7 +48,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             sx={{
-              mr: 2,
+              marginRight: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
@@ -126,7 +126,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             sx={{
-              mr: 2,
+              marginRight: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'monospace',
@@ -147,7 +147,7 @@ function ResponsiveAppBar() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{
-                  my: 2,
+                  marginY: 2,
                   color: 'text.primary',
                   display: 'block',
                   '&:hover': {

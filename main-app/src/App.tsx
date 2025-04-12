@@ -42,8 +42,8 @@ function App() {
       <Box
         sx={{
           width: "100%",
-          mt: 0,
-          mb: 4,
+          marginTop: 0,
+          marginBottom: 4,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -69,10 +69,10 @@ function App() {
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: 'center',
-              mt: 4,
+              marginTop: 4,
             }}
           >
-            <Typography variant="h4" color="text.secondary" component="h1" sx={{ mb: 2 }}>
+            <Typography variant="h4" color="text.secondary" component="h1" sx={{ marginBottom: 2 }}>
               Find your favorite foods.
             </Typography>
 
@@ -82,7 +82,7 @@ function App() {
               onClick={handleFetchRestaurants}
               variant="contained"
               color="primary"
-              sx={{ mt: 2 }}
+              sx={{ marginTop: 2 }}
             >
               Search for Restaurants
             </Button>
@@ -90,7 +90,7 @@ function App() {
 
           <Box
             sx={{
-              mt: 4,
+              marginTop: 4,
               display: 'flex',
               justifyContent: 'center',
               gap: 4,

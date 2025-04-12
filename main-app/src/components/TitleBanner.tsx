@@ -23,7 +23,7 @@ export default function TitleBanner() {
                 variant="h2"
                 color="text.primary"
                 sx={{
-                    mt: 7,
+                    marginTop: 7,
                     position: 'absolute',
                     zIndex: 1,
                     fontWeight: 'bold',
@@ -38,7 +38,7 @@ export default function TitleBanner() {
                 variant="h5"
                 color="text.primary"
                 sx={{
-                    mt: 22,
+                    marginTop: 22,
                     position: 'absolute',
                     zIndex: 1,
                     fontWeight: '300',

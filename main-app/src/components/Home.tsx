@@ -14,8 +14,8 @@ export default function HomeComponent() {
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 alignItems: 'center',
-                px: { xs: 2, sm: 6, md: 18 },
-                py: 4,
+                paddingX: { xs: 2, sm: 6, md: 18 },
+                paddingY: 4,
                 gap: 2,
                 marginBottom: 0
             }}
