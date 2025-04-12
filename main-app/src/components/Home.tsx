@@ -6,7 +6,6 @@ export default function HomeComponent() {
     return (
         <Box
             sx={{
-                borderBottom: '5px solid #ffa200',
                 width: "100%",
                 position: 'relative',
                 backgroundSize: 'cover',
@@ -18,7 +17,7 @@ export default function HomeComponent() {
                 px: 12,
                 py: 4,
                 gap: 2,
-                marginBottom: 5
+                marginBottom: 0
             }}
         >
             <Typography
@@ -29,7 +28,7 @@ export default function HomeComponent() {
                     zIndex: 1,
                     fontWeight: 'bold',
                     textAlign: 'center',
-                    fontSize: { xs: '2rem', sm: '3rem', md: '4rem' }
+                    fontSize: { xs: '2rem', sm: '4rem', md: '4rem' }
                 }}
             >
                 Home

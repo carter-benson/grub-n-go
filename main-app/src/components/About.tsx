@@ -30,7 +30,7 @@ export default function AboutComponent() {
                     zIndex: 1,
                     fontWeight: 'bold',
                     textAlign: 'center',
-                    fontSize: { xs: '2rem', sm: '3rem', md: '4rem' }
+                    fontSize: { xs: '2rem', sm: '4rem', md: '4rem' }
                 }}
             >
                 About Us

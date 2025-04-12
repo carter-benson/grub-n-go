@@ -10,13 +10,13 @@ export default function TitleBanner() {
                 width: "100%",
                 position: 'relative',
                 height: '300px',
-                backgroundImage: 'url(https://i.ibb.co/XZQmbPL7/sasaassaas.jpg)',
+                backgroundImage: 'url(https://i.ibb.co/1fgbYxN8/banner.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginBottom: 5
+                marginBottom: 0
             }}
         >
             <Typography
