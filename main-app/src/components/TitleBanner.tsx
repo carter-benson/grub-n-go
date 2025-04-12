@@ -23,7 +23,7 @@ export default function TitleBanner() {
                 variant="h2"
                 color="text.primary"
                 sx={{
-                    mt: 9,
+                    mt: 7,
                     position: 'absolute',
                     zIndex: 1,
                     fontWeight: 'bold',

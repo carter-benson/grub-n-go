@@ -5,7 +5,7 @@ import ResponsiveAppBar from './components/ResponsiveAppBar.tsx';
 import Card from './components/Card.tsx';
 import ComboBox, { FoodGroupOption } from './components/ComboBox.tsx';
 import TitleBanner from './components/TitleBanner.tsx';
-import Container from '@mui/material/Container';
+import AboutComponent from './components/About.tsx';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { ThemeProvider } from '@mui/material/styles';
@@ -55,6 +55,8 @@ function App() {
 
           <TitleBanner />
 
+          <AboutComponent />
+
           <Typography variant="h4" color="text.secondary" component="h1" sx={{ mb: 2 }}>
             Find your favorite foods.
           </Typography>
@@ -77,6 +79,7 @@ function App() {
               justifyContent: 'center',
               gap: 4,
               flexWrap: 'wrap',
+              marginBottom: 6
             }}
           >
             {restaurants.slice(0, 2).map((restaurant, index) => (
