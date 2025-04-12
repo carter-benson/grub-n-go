@@ -13,11 +13,11 @@ type CardProps = {
   sx?: SxProps;
 }
 
-export default function RestaurantCard({ name, rating, priceRange, sx}: CardProps) {
+export default function RestaurantCard({ name, rating, priceRange, sx }: CardProps) {
   return (
-    <Card sx={{ borderTop: '15px solid #ffa200', borderBottom: '5px solid #ffa200', width: "100%", color:'text.secondary' }}>
+    <Card sx={{ borderTop: '15px solid #ffa200', borderBottom: '5px solid #ffa200', width: "100%", color: 'text.secondary' }}>
       <CardContent>
-        <Typography sx={{ marginBottom: 1, fontWeight: 'bold'}} variant="h5" component="div" color="text.secondary">
+        <Typography sx={{ marginBottom: 1, fontWeight: 'bold' }} variant="h5" component="div" color="text.secondary">
           {name}
         </Typography>
 
@@ -28,7 +28,18 @@ export default function RestaurantCard({ name, rating, priceRange, sx}: CardProp
         <Rating name="read-only" value={rating} readOnly />
 
         <Typography variant="body2" sx={{ marginY: 0 }} color="text.secondary">
-          Price Range: {"$".repeat(Number(priceRange))}
+          {(() => {
+            switch (priceRange) {
+              case 1:
+                return "Price: $1 - $10";
+              case 2:
+                return "Price: $10 - $20";
+              case 3:
+                return "Price: $20 - $30";
+              default:
+                return "Price: N/A";
+            }
+          })()}
         </Typography>
       </CardContent>
     </Card>
